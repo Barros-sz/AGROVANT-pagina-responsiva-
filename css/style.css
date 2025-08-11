@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --cor-fundo-base: #000000;
+    --cor-destaque: #00c853;
+    --cor-principal: #2a4a28;
+    --cor-contraste: #ffffff;
+
+    --fonte-principal: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-principal);
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--cor-fundo-base);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 4.5vh;
+    color: var(--cor-contraste);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 8px 16px;
+}
+
+.menu ul li a:hover {
+    background-color: var(--cor-destaque);
+    border-radius: 4px;
+}
+
+.botao_agende {
+    background-color: var(--cor-principal);
+    color: var(--cor-contraste);
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.botao_agende:hover {
+    background-color: var(--cor-destaque);
+    border-radius: 3px;
+}
+
+/* ======== INÍCIO / HERO ======== */
+#video-fundo {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.linha_home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    color: white;
+    text-align: center;
+}
+
+.linha_home .container_h {
+    padding-bottom: 20vh;
+}
+
+.linha_home .container_h h1 {
+    font-size: 80px;
+    font-family: var(--fonte-principal);
+    color: var(--cor-contraste);
+}
+
+.linha_home .container_h p {
+    font-size: 40px;
+    font-family: var(--fonte-principal);
+}
+
+.botao_quero {
+    display: inline-block;
+    background-color: var(--cor-principal);
+    color: var(--cor-contraste);
+    transition: 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 70px;
+    font-size: 20px;
+    font-family: var(--fonte-principal);
+}
+
+.botao_quero:hover {
+    background-color: var(--cor-destaque);
+    border-radius: 3px;
+}
+
+/* ======== FUNÇÕES ======== */
+.linha {
+    min-height: 90vh;
+    padding: 120px 20px 60px;
+    background-color: var(--cor-fundo-base);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    color: var(--cor-contraste);
+    width: 100%;
+}
+
+.container h1 {
+    font-size: 5.2vh;
+    color: var(--cor-contraste);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-top: 20px;
+    font-size: 4vh;
+    color: var(--cor-contraste);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container p {
+    font-size: 3vh;
+    color: var(--cor-contraste);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45vh;
+}
+
+.assistir {
+    background-color: var(--cor-contraste);
+    color: var(--cor-fundo-base);
+    transition: 0.3s;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 70px;
+    font-size: 20px;
+    font-family: var(--fonte-principal);
+
+    &:hover {
+        background-color: var(--cor-principal);
+        border-radius: 15px;
+        border: none;
+    }
+}
+
+.reportagem {
+    background-color: var(--cor-fundo-base);
+    color: var(--cor-contraste);
+    transition: 0.3s;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 70px;
+    font-size: 20px;
+    font-family: var(--fonte-principal);
+    border: 0.5px solid var(--cor-contraste);
+
+    &:hover {
+        border: none;
+        background-color: var(--cor-principal);
+        border-radius: 15px;
+    }
+}
+
+video {
+    margin-top: 10vh;
+}
+
+
+
+/* ======== ESPECIFICAÇÕES ======== */
+.linha_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    background-color: #121212;
+}
+
+.card {
+    flex: 1 1 30%;
+    min-width: 280px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 20px;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 250px;
+    transition: background 0.3s;
+}
+
+.card:hover {
+    background-color: #2c2c2c;
+}
+
+.card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+/* ======== DEPOIMENTO ======== */
+
+.depoimento {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    gap: 20px;
+    overflow: hidden;
+}
+.linha .depoimento{
+    height: 50vh;
+    margin: 0;
+    background-image: url('../img/img/Imagem\ 3.jpg');
+}
+.depoimento .fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+
+.depoi_txt {
+    width: 30%;
+}
+
+.depoi_txt h3 {
+    color: var(--cor-contraste);
+    font-size: 28px;
+}
+
+.depoi_txt h4,
+.depoi_txt p {
+    font-size: 16px;
+    color: var(--cor-contraste);
+}
+
+.depoi_img {
+    height: 100%;
+    width: 20%;
+    text-align: center;
+}
+
+.depoi_img img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.depoi_ava {
+    color: var(--cor-contraste);
+    width: 25%;
+}
+
+.estrelas {
+    font-size: 22px;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    height: 50vh;
+    background-color: var(--cor-fundo-base);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+    justify-content: space-around;
+    border-top: 1px solid var(--cor-contraste);
+}
+
+.escrita_rodape h3 {
+    margin: 20px 0;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.escrita_rodape h4 {
+    margin: 20px 0px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+
+/* form */
+.formulario {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 320px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--cor-fundo-base);
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #00c853;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00b34e;
+}
+
+/* ============================================ Responsividade ======================================== */
+
+@media (max-width: 768px) {
+
+    /* ======== CABEÇALHO ======== */
+    header {
+        height: auto;
+        flex-direction: row;
+        padding: 15px;
+        position: relative;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 3vh;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu ul li a {
+        padding: 5px 10px;
+    }
+
+    .botao_agende {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    /* ======== INÍCIO / HERO ======== */
+    .linha_home {
+        padding-top: 0;
+        height: 60vh;
+    }
+
+    .linha_home .container_h {
+        padding-bottom: 0;
+    }
+
+    .linha_home .container_h h1 {
+        font-size: 50px;
+    }
+
+    .linha_home .container_h p {
+        font-size: 20px;
+    }
+
+    .botao_quero {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    #video-fundo {
+        top: 50%;
+    }
+
+    /* ======== FUNÇÕES ======== */
+    .linha {
+        min-height: auto;
+        padding: 60px 10px;
+    }
+
+    .container h1 {
+        font-size: 3vh;
+        margin-bottom: 20px;
+    }
+
+    .container h2 {
+        font-size: 2.5vh;
+    }
+
+    .container p {
+        font-size: 2vh;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .assistir,
+    .reportagem {
+        width: 80%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    video {
+        margin-top: 5vh;
+        width: 100%;
+        height: auto;
+    }
+
+    /* ======== ESPECIFICAÇÕES ======== */
+    .linha_cards {
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .card {
+        min-width: 100%;
+        height: auto;
+        padding: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    /* ======== DEPOIMENTO ======== */
+    .depoimento {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px 10px;
+    }
+
+    .depoi_txt,
+    .depoi_img,
+    .depoi_ava {
+        width: 100%;
+        text-align: center;
+    }
+
+    .depoi_img img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* ======== RODAPÉ ======== */
+    footer {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .escrita_rodape h3 {
+        font-size: 24px;
+    }
+
+    .escrita_rodape h4 {
+        font-size: 20px;
+    }
+
+    .formulario {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
