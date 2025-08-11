@@ -527,7 +527,7 @@ button:hover {
 
     /* ======== DEPOIMENTO ======== */
     .depoimento {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         text-align: center;
         padding: 50px 10px;
