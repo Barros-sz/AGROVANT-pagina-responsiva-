@@ -88,7 +88,7 @@ header h1 {
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -2;
 }
 
 .linha_home {
@@ -412,25 +412,6 @@ button:hover {
 
     .menu ul {
         display: none;
-    }
-
-    header h1 {
-        font-size: 3vh;
-        margin-bottom: 10px;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .menu ul li a {
-        padding: 5px 10px;
     }
 
     .botao_agende {
